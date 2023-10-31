@@ -128,13 +128,13 @@ include_directories(
 )
 
 add_executable(camera_node src/camera_node.cpp)
-#add_executable(aruco_node src/aruco_node.cpp)
+add_executable(aruco_node src/aruco_node.cpp)
 
 target_link_libraries(camera_node ${catkin_LIBRARIES})
 target_link_libraries(camera_node ${OpenCV_LIBRARIES})
 
-#target_link_libraries(aruco_node ${catkin_LIBRARIES})
-#target_link_libraries(aruco_node ${OpenCV_LIBRARIES})
+target_link_libraries(aruco_node ${catkin_LIBRARIES})
+target_link_libraries(aruco_node ${OpenCV_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

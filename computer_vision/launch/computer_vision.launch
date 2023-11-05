@@ -1,6 +1,5 @@
 <launch>
 
-    <node name ="camera_node" pkg = "computer_vision" type = "camera_node" output = "screen"/>
     <node name ="aruco_node" pkg = "computer_vision" type = "aruco_node" output = "screen"/>
 
 </launch>

@@ -8,7 +8,6 @@ project(computer_vision)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  camera_info_manager
   cv_bridge
   image_transport
   roscpp
@@ -20,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-find_package(OpenCV)
+find_package(OpenCV 4 REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -107,7 +106,7 @@ find_package(OpenCV)
 ## INCLUDE_DIRS: uncomment this if your package contains header files
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
-## DEPENDS: system dependencies of this project that dependent projects also need
+## DEPENDS: system d/home/ubuntu/OpenCVTutorials/OpenCV_Tutorials/Resources/test.pngependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES computer_vision
@@ -122,19 +121,23 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  #include
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
 )
 
 add_executable(camera_node src/camera_node.cpp)
 add_executable(aruco_node src/aruco_node.cpp)
+add_executable(aruco_node2 src/aruco_node2.cpp)
 
 target_link_libraries(camera_node ${catkin_LIBRARIES})
 target_link_libraries(camera_node ${OpenCV_LIBRARIES})
 
 target_link_libraries(aruco_node ${catkin_LIBRARIES})
 target_link_libraries(aruco_node ${OpenCV_LIBRARIES})
+
+target_link_libraries(aruco_node2 ${catkin_LIBRARIES})
+target_link_libraries(aruco_node2 ${OpenCV_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

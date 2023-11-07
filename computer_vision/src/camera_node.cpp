@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
     //Create a publisher object 
     //ros::Publisher image_pub = nh.advertise<sensor_msgs::Image>("camera/image", 1);
     image_transport::ImageTransport it(nh);
-    image_transport::Publisher imagePub = it.advertise("camera/image", 10);
+    image_transport::Publisher imagePub = it.advertise("webCam/Image_raw", 10);
 
     //creates a CvImage object called img_bridge using cv_bridge
     cv_bridge::CvImage img_bridge;
@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
         //publish ROS Sensor Image
         imagePub.publish(img_msg);
 
-        cv::imshow("camera", frame);
+        cv::imshow("C++ WebCam", frame);
         cv::waitKey(1);
         
         //Although not necessarily needed here, this allowed the ROS framework to process any incoming messages or events.

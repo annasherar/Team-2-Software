@@ -130,6 +130,8 @@ add_executable(camera_node src/camera_node.cpp)
 add_executable(aruco_node src/aruco_node.cpp)
 add_executable(aruco_node2 src/aruco_node2.cpp)
 
+
+
 target_link_libraries(camera_node ${catkin_LIBRARIES})
 target_link_libraries(camera_node ${OpenCV_LIBRARIES})
 
@@ -138,6 +140,20 @@ target_link_libraries(aruco_node ${OpenCV_LIBRARIES})
 
 target_link_libraries(aruco_node2 ${catkin_LIBRARIES})
 target_link_libraries(aruco_node2 ${OpenCV_LIBRARIES})
+
+
+
+catkin_install_python(
+  PROGRAMS src/aruco_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
+catkin_install_python(
+  PROGRAMS src/camera_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

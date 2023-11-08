@@ -10,3 +10,4 @@ The Camera node interfaces with a connected webcam, and publishes image data whi
 11/7/23 UPDATE:
 Redid the C++ Camera Node. Now, the two main files are "camera_node.cpp" and "aruco_node.py"
 They work together the same as before, but one is just now in C++ again.
+Also added in Aruco marker position estimation w/respect to the camera frame. I have yet to add proper camera calibration however.

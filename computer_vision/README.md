@@ -1,5 +1,5 @@
 In progress computer_vision ROS package for the drone. This package deals with accessing and publishing camera images. 
-Also deals with computer vision to detect aruco markers and estimate pose with respect to aruco markers.
+Also deals with computer vision to detect aruco markers and estimate pose of Aruco marker with respect to the camera frame.
 
 11/5/23 UPDATE:
 the two main working files are aruco_node_py.py and camera_node_py.py. These were reworked in python due to issues in C++ that we still have to work on.

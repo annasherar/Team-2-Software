@@ -59,8 +59,9 @@ int main(int argc, char** argv) {
         //publish ROS Sensor Image
         imagePub.publish(img_msg);
 
-        cv::imshow("C++ WebCam", frame);
-        cv::waitKey(1);
+        //Test
+        // cv::imshow("C++ WebCam", frame);
+        // cv::waitKey(1);
         
         //Although not necessarily needed here, this allowed the ROS framework to process any incoming messages or events.
         //ie, it checks for any incoming messages on the topics I'm publishing or subscribing to and execute the corresponding callback functions.

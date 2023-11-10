@@ -4,6 +4,7 @@
 #include "cv_bridge/cv_bridge.h"
 #include "opencv2/highgui/highgui.hpp"   
 #include <image_transport/image_transport.h>    
+#include <iostream>
 
 
 
@@ -28,15 +29,26 @@ int main(int argc, char** argv) {
 
     //Use OpenCV to capture camera feed
     cv::VideoCapture cam;
-    cam.open(0); 
 
-    if(!cam.isOpened()){
-       ROS_ERROR("Failed to open camera device.");
-       return -1; 
+    ros::Rate connect_rate(1);
+
+    while(ros::ok()){
+        cam.open(0); 
+        if(!cam.isOpened()){
+            ROS_ERROR("Failed to open camera device.");
+
+        }
+        else{
+            std::cout <<"Camera connected..."<< std::endl;
+            break;
+        }
+
+        connect_rate.sleep();
     }
-
+       
+   
     //set the desired publishing rate (Hz)
-    ros::Rate loop_rate(30);  
+    ros::Rate loop_rate(60);  
 
     //keep capturing image data while ROS master is up and running or if node hasn't been told to shut down
     while(ros::ok()){

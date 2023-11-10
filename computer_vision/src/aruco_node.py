@@ -33,7 +33,7 @@ camMatrix = numpy.array([[fx,0,cx], [0,fy,cy], [0,0,1]])
 distCoeffs = numpy.array([k1, k2, p1, p2, k3])
 
 #Define Marker dimension
-markerLength = 0.075 #Note this should be in the same unit as camera calibration units
+markerLength = 0.05073 #Note this should be in the same unit as camera calibration units
 
 
 

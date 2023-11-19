@@ -1,4 +1,4 @@
-# **Unmanned Aerial Vehicle ROS Packages**
+# **2023 Texas Aerial Robotics Drone Team 2 ROS Packages**
 
 ## **Description**
 As part of Texas Aerial Robotics (TAR) I have contributed in the development of several ROS packages that allow for the offboard control and autonomous capability of an unmanned aerial vehicle.

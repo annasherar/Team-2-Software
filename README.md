@@ -1,5 +1,7 @@
 # **2023 Texas Aerial Robotics Drone Team 2 ROS Packages**
 
+Editors: Joshua Caratao
+
 ## **Description**
 The 2023 Texas Aerial Robotics Drone Team 2 has worked on the development of several ROS packages that allow for the offboard control and autonomous capability of an unmanned aerial vehicle in conjunction with the PX4 Flight Controller Firmware.
 

@@ -35,6 +35,10 @@ Other Package dependencies include MAVROS, Mavlink, and OpenCV(c++ and Python ve
 
 ### 3. Installation of OpenCV
 
+ OpenCV is a popular open source Computer Vision library useful for image collection, image and video processing, and computer vision tasks (object recognition, aruco marker detection, etc). OpenCV is written in C++ but has bindings for other languages like Python.
+  
+ This will be a critical component of our drone as OpenCV will allow us to interface cameras with our ROS program and perform tasks like Aruco Marker Detection/Pose Estimation and Simultaneous Localization and Mapping (SLAM).
+
   For our purposes, I recommend installing OpenCV for C++, which will take longer, but you can also install OpenCV for Python if you want
 
 #### **OpenCV with C++**
